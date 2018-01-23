@@ -1,1 +1,261 @@
 Test Git Quick Start demo
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git version
+git version 2.15.1.windows.2
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ pwd
+/c/Users/ivan.rodriguez
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global user.name "Ivan"
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global user.name "Ivan"
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global user.name
+Ivan
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global user.mail "ivan.rodrigueza@softtek.com"
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global user.mail
+ivan.rodrigueza@softtek.com
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ git config --global --list
+user.name=Ivan
+user.mail=ivan.rodrigueza@softtek.com
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ pwd
+/c/Users/ivan.rodriguez
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ mkdir proyectos
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ ls
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ default-soapui-workspace.xml
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ Music/
+'My Documents'@
+ NetHood@
+ NTUSER.DAT
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf
+ NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms
+ ntuser.ini
+ ntuser.pol
+ Pictures/
+ PrintHood@
+ proyectos/
+ Recent@
+ Roaming/
+'Saved Games'/
+ Searches/
+ SendTo@
+ soapui-settings.xml
+'Start Menu'@
+ Templates@
+ Videos/
+ workspace/
+ workspace-papyrus/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~
+$ cd proyectos
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ pwd
+/c/Users/ivan.rodriguez/proyectos
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ git clone https://github.com/ivanapolinar/github-demo.git
+Cloning into 'github-demo'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ ls
+github-demo/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ cd github-demo/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ ls
+README.md
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ echo "Test Git Quick Start demo" >> start.txt
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ ls
+README.md  start.txt
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ cat start.txt
+Test Git Quick Start demo
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        start.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git add start.txt
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   start.txt
+
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git commit -m "Adding start text file"
+[master 04020a9] Adding start text file
+ Committer: Ivan <ivan.rodriguez@stkrursus.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 start.txt
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git push origin master
+ivanCounting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ivanapolinar/github-demo.git
+   dfbfd88..04020a9  master -> master
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ git init fresh-project
+Initialized empty Git repository in C:/Users/ivan.rodriguez/proyectos/github-demo/fresh-project/.git/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ ls
+fresh-project/  README.md  start.txt
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ remove fresh-project/
+bash: remove: command not found
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ rm fresh-project/
+rm: cannot remove 'fresh-project/': Is a directory
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/github-demo (master)
+$ cd ..
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ git init fresh-project
+Initialized empty Git repository in C:/Users/ivan.rodriguez/proyectos/fresh-project/.git/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ ls
+fresh-project/  github-demo/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos
+$ cd fresh-project/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ ls
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ ls -al
+total 4
+drwxr-xr-x 1 ivan.rodriguez 1049089 0 Jan 23 12:03 ./
+drwxr-xr-x 1 ivan.rodriguez 1049089 0 Jan 23 12:03 ../
+drwxr-xr-x 1 ivan.rodriguez 1049089 0 Jan 23 12:03 .git/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ cd .git
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project/.git (GIT_DIR!)
+$ ls
+config  description  HEAD  hooks/  info/  objects/  refs/
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project/.git (GIT_DIR!)
+$ cd ..
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ pwd
+/c/Users/ivan.rodriguez/proyectos/fresh-project
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ mate github.txt
+bash: mate: command not found
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ pwd
+/c/Users/ivan.rodriguez/proyectos/fresh-project
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$ notepad github.txt
+/usr/bin/notepad: line 10: exec: notepad.exe: not found
+
+ivan.rodriguez@LSTKTR93234 MINGW64 ~/proyectos/fresh-project (master)
+$
